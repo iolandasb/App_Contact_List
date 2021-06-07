@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B1B3A"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:background="#1B1B3A"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+    <EditText
+        android:background="@drawable/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="24dp"
+        android:textColor="#1B1B3A"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="Minha Agenda"/>
+
+    <EditText
+        android:id="@+id/edtNome"
+        android:backgroundTint="#FFFFFF"
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:hint="Nome"
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/edtCelular"
+        android:backgroundTint="#FFFFFF"
+        android:inputType="phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:hint="Celular"
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="24dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background">
+    <RadioGroup
+        android:id="@+id/rdgTipoCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+        <EditText
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="24dp"
+            android:textColor="#1B1B3A"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="Tipo de Contato"/>
+        <RadioButton android:id="@+id/rdPessoal"
+            android:buttonTint="#1B1B3A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pessoal"
+            android:textColor="#1B1B3A"
+            android:textSize="17dp"
+            android:onClick="onRadioButtonClicked"
+            android:checked="true"/>
+        <RadioButton android:id="@+id/rdTrabalho"
+            android:buttonTint="#1B1B3A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trabalho"
+            android:textColor="#1B1B3A"
+            android:textSize="17dp"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+    </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtReferencia"
+            android:backgroundTint="#FFFFFF"
+            android:inputType="textEmailAddress"
+            android:layout_margin="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Referência"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:backgroundTint="#07DEF8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#1B1B3A"
+            android:textStyle="bold"
+            android:text="Salvar" />
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edtPesquisa"
+                android:backgroundTint="#FFFFFF"
+                android:inputType="textPersonName"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_margin="24dp"
+                android:hint="Pesquisar"
+                android:textColorHint="#FFFFFF"
+                android:textColor="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/btnPesquisar"
+                android:layout_gravity="center_vertical"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#07DEF8"
+                app:srcCompat="@drawable/ic_action_name"
+                tools:ignore="VectorDrawableCompat" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtResultado"
+            android:background="@drawable/background"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="left"
+            android:text="Cadastros"
+            android:textStyle="bold"
+            android:textColorHint="#FFFFFF"
+            android:textSize="15dp"
+            android:textColor="#1B1B3A" />
+
+        <Button
+            android:id="@+id/btnLimparPesquisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#1B1B3A"
+            android:textStyle="bold"
+            android:backgroundTint="#07DEF8"
+            android:text="Limpar Pesquisa" />
+
+    </LinearLayout>
+
+</ScrollView>
